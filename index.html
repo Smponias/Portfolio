@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alex – Creative App Developer</title>
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="styles/variables.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header" role="banner">
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+      <div class="navbar-left">
+        <ul class="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Work</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="navbar-right">
+        <button class="hamburger" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" aria-label="Hero Section">
+    <div class="hero-content">
+      <!-- Update this link to point to your actual resume file or external URL -->
+      <a href="YourResume.pdf" class="cta-top-button" download>Get My Resume</a>
+      <h1>
+        Hi, I'm Alex <span class="highlight" id="typing"></span>
+      </h1>
+      <p>
+        App Developer &amp; UX Enthusiast dedicated to crafting seamless digital experiences.
+      </p>
+      <div class="hero-buttons">
+        <a href="#projects" class="cta-button cta-pill cta-primary">Explore My Work</a>
+        <a href="#contact" class="cta-button cta-pill">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <!-- About Section -->
+    <section id="about" aria-label="About Me Section">
+      <div class="section-content">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <div class="about-image">
+            <!-- Replace with your actual profile image -->
+            <img src="https://via.placeholder.com/300x300.png?text=Profile" alt="Profile image of Alex" />
+          </div>
+          <div class="about-text">
+            <p>
+              I’m Alex, a user-focused app developer passionate about building intuitive digital experiences. With expertise in UX design and a background in architecture, I bring a holistic approach to turning ideas into polished, user-friendly applications.
+            </p>
+            <br />
+            <p>
+              When I’m not coding, I explore the local culinary scene as StuttgartFoodie Alex—discovering hidden gems and sharing my experiences with fellow food enthusiasts.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" aria-label="Projects Section">
+      <div class="section-content">
+        <h2>My Work</h2>
+        <div class="project-container">
+          <div class="project-card">
+            <h3>Projects Coming Soon</h3>
+            <p>Stay tuned for updates on my latest work and case studies.</p>
+            <a href="#" class="project-link">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" aria-label="Skills Section">
+      <div class="section-content">
+        <h2>Technical Skills</h2>
+        <div class="skills-container">
+          <div class="skill-item">iOS Development</div>
+          <div class="skill-item">Android Development</div>
+          <div class="skill-item">Swift</div>
+          <div class="skill-item">SwiftUI</div>
+          <div class="skill-item">Kotlin</div>
+          <div class="skill-item">Jetpack Compose</div>
+          <div class="skill-item">GitHub Actions</div>
+          <div class="skill-item">Azure DevOps</div>
+          <div class="skill-item">Domain Driven Design</div>
+          <div class="skill-item">ARC42</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" aria-label="Contact Section">
+      <div class="section-content">
+        <h2>Get in Touch</h2>
+        <p>
+          I'm always excited to collaborate on innovative projects or simply chat about ideas. Send me a message, and I'll get back to you soon!
+        </p>
+        <form class="contact-form" action="#" method="POST">
+          <!-- Replace '#' with your form-handling endpoint or service -->
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit" class="cta-button cta-pill cta-primary">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="footer-content">
+      <p>&copy; 2025 Alex. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://twitter.com/" target="_blank">Twitter</a>
+        <a href="https://github.com/" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="scripts/main.js"></script>
+</body>
+</html>
