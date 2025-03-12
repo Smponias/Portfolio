@@ -96,14 +96,20 @@ a:hover {
     background: #111;
     position: absolute;
     top: var(--navbar-height);
-    left: 0; /* Start at left edge */
-    width: 100%; /* Full width for better tap targets */
-    padding: 2rem;
+    left: 0;
+    width: 100%;
+    padding: 1rem;  /* Reduced from 2rem for a more compact menu */
     border-top: 1px solid #333;
   }
+
   .nav-links li {
-    margin: 0 auto 1.5rem;
+    margin-left: 0;
+    margin-bottom: 1rem; /* Reduced spacing */
     text-align: center;
+  }
+  #typing {
+    display: block;
+    margin-top: 0.5rem;
   }
 }
 
@@ -260,8 +266,14 @@ a:hover {
 .about-image img {
   width: 100%;
   max-width: 300px;
-  border-radius: 50%;
+  /* Remove the old border-radius if any */
+  border-radius: 0;
+  /* Modern hexagon shape */
+  clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
+  /* Optional: add a subtle border */
+  border: 3px solid var(--color-primary);
 }
+
 
 .about-text {
   flex: 2;
