@@ -264,14 +264,11 @@ a:hover {
 }
 
 .about-image img {
-  width: 100%;
-  max-width: 300px;
-  /* Remove the old border-radius if any */
-  border-radius: 0;
-  /* Modern hexagon shape */
-  clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
-  /* Optional: add a subtle border */
-  border: 3px solid var(--color-primary);
+  width: 300px;
+  height: 300px;  /* Ensure the element is a square */
+  border-radius: 50%;  /* 50% on a square creates a perfect circle */
+  border: 5px solid var(--color-primary);
+  object-fit: cover; /* Ensures the image covers the square without distortion */
 }
 
 

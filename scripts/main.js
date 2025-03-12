@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
       ? currentWord.substring(0, letterIndex - 1)
       : currentWord.substring(0, letterIndex + 1);
 
-    typingElement.textContent = currentText;
+    typingElement.innerHTML = currentText || '&nbsp;';
 
     if (!isDeleting) {
       letterIndex++;
