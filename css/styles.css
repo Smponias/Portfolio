@@ -164,8 +164,15 @@ p {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: var(--border-width) solid rgba(50, 50, 50, 0.5);
-    transition: background-color var(--transition-medium);
+    transition: background-color var(--transition-medium), color var(--transition-medium), border-bottom var(--transition-medium);
     color: #fff;
+}
+
+/* Light mode header */
+:root:not(.dark-mode) .header {
+    background-color: rgba(245, 247, 250, 0.8);
+    border-bottom: var(--border-width) solid rgba(210, 210, 215, 0.5);
+    color: #333;
 }
 
 .header-container {
@@ -190,6 +197,12 @@ p {
     font-weight: var(--font-weight-medium);
     position: relative;
     padding: var(--spacing-xs) 0;
+    transition: color var(--transition-medium);
+}
+
+/* Light mode navigation links */
+:root:not(.dark-mode) .nav-link {
+    color: #333;
 }
 
 .nav-link::after {
@@ -260,6 +273,13 @@ p {
     padding-top: 64px;
     background-color: #000;
     color: #fff;
+    transition: background-color var(--transition-medium), color var(--transition-medium);
+}
+
+/* Light mode hero section */
+:root:not(.dark-mode) .hero-section {
+    background-color: #f5f7fa;
+    color: #333;
 }
 
 .parallax-bg {
@@ -272,6 +292,13 @@ p {
     background-image: radial-gradient(circle at center, rgba(50, 50, 50, 0.8) 0%, rgba(0, 0, 0, 1) 70%);
     z-index: -1;
     overflow: hidden;
+    transition: background-color var(--transition-medium), background-image var(--transition-medium);
+}
+
+/* Light mode background */
+:root:not(.dark-mode) .parallax-bg {
+    background-color: #f5f7fa;
+    background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.8) 0%, rgba(240, 242, 245, 1) 70%);
 }
 
 /* Add subtle particle effect to background */
@@ -285,6 +312,12 @@ p {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="0.5" fill="%23ffffff" opacity="0.3"/></svg>');
     background-size: 150px 150px;
     opacity: 0.3;
+    transition: background-image var(--transition-medium);
+}
+
+/* Light mode particles */
+:root:not(.dark-mode) .parallax-bg::before {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="0.5" fill="%23000000" opacity="0.1"/></svg>');
 }
 
 .hero-content {
@@ -301,6 +334,13 @@ p {
     line-height: 1.1;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
     color: #fff;
+    transition: color var(--transition-medium), text-shadow var(--transition-medium);
+}
+
+/* Light mode hero title */
+:root:not(.dark-mode) .hero-title {
+    color: #333;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .title-line {
