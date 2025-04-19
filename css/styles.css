@@ -1095,9 +1095,7 @@ p {
         height: 56px;
     }
     
-    .main-nav {
-        display: none;
-    }
+    /* Mobile menu toggle is visible instead of always showing nav */
     
     .hero-title {
         font-size: 3rem;
