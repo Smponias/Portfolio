@@ -149,15 +149,23 @@
 }
 
 /* Mobile Optimization for Gradients */
+.gradient-text, .section-title {
+    background-size: 200% auto;
+    animation: gradient-shift 5s ease infinite;
+}
+
+@keyframes gradient-shift {
+    0% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+    100% { background-position: 0% center; }
+}
+
+body::before {
+    animation-duration: 10s;
+}
+
 @media (max-width: 768px) {
     .gradient-text, .section-title {
-        background-size: 200% auto;
-        animation: gradient-shift 5s ease infinite;
-    }
-    
-    @keyframes gradient-shift {
-        0% { background-position: 0% center; }
-        50% { background-position: 100% center; }
-        100% { background-position: 0% center; }
+        background-size: 300% auto; /* Wider background size for more dramatic effect on mobile */
     }
 }
