@@ -160,11 +160,12 @@ p {
     left: 0;
     width: 100%;
     z-index: var(--z-index-header);
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-bottom: var(--border-width) solid rgba(210, 210, 215, 0.5);
+    border-bottom: var(--border-width) solid rgba(50, 50, 50, 0.5);
     transition: background-color var(--transition-medium);
+    color: #fff;
 }
 
 .header-container {
@@ -185,7 +186,7 @@ p {
 }
 
 .nav-link {
-    color: var(--color-text);
+    color: #fff;
     font-weight: var(--font-weight-medium);
     position: relative;
     padding: var(--spacing-xs) 0;
@@ -221,25 +222,31 @@ p {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
+/* Dark mode toggle icons */
 .toggle-icon {
-    position: relative;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 2px solid var(--color-text);
-    overflow: hidden;
+    color: var(--color-text);
+    transition: opacity var(--transition-medium);
 }
 
-.toggle-icon::before {
-    content: '';
+/* Show sun by default (light mode) */
+.toggle-icon.sun {
+    opacity: 1;
+}
+
+.toggle-icon.moon {
+    opacity: 0;
     position: absolute;
-    top: -8px;
-    right: -8px;
-    width: 20px;
-    height: 20px;
-    background-color: var(--color-background);
-    border-radius: 50%;
-    transition: transform var(--transition-medium);
+    top: 8px;
+    left: 8px;
+}
+
+/* In dark mode, show moon and hide sun */
+:root.dark-mode .toggle-icon.sun {
+    opacity: 0;
+}
+
+:root.dark-mode .toggle-icon.moon {
+    opacity: 1;
 }
 
 /* ===== Hero Section ===== */
@@ -248,8 +255,11 @@ p {
     height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
     padding-top: 64px;
+    background-color: #000;
+    color: #fff;
 }
 
 .parallax-bg {
@@ -258,21 +268,39 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-color: #000;
+    background-image: radial-gradient(circle at center, rgba(50, 50, 50, 0.8) 0%, rgba(0, 0, 0, 1) 70%);
     z-index: -1;
-    transform: translateZ(-1px) scale(2);
+    overflow: hidden;
+}
+
+/* Add subtle particle effect to background */
+.parallax-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="0.5" fill="%23ffffff" opacity="0.3"/></svg>');
+    background-size: 150px 150px;
+    opacity: 0.3;
 }
 
 .hero-content {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
+    z-index: 1;
+    padding: 0 20px;
 }
 
 .hero-title {
-    font-size: 4rem;
+    font-size: 4.5rem;
     margin-bottom: var(--spacing-lg);
     line-height: 1.1;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    color: #fff;
 }
 
 .title-line {
@@ -285,10 +313,11 @@ p {
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
     margin-bottom: var(--spacing-xl);
     display: flex;
+    align-items: center;
     justify-content: center;
+    height: 2rem;
     flex-wrap: wrap;
     gap: var(--spacing-sm);
 }

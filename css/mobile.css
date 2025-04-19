@@ -103,15 +103,7 @@
         font-size: 2.5rem;
     }
     
-    .hero-subtitle {
-        font-size: 1.2rem;
-        flex-direction: column;
-        gap: 0.25rem;
-    }
-    
-    .hero-subtitle .separator {
-        display: none;
-    }
+    /* Hero subtitle styling is now handled in typing.css */
     
     .hero-cta {
         flex-direction: column;
