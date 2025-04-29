@@ -1,0 +1,51 @@
+/* variables.css: CSS custom properties for colors, typography, spacing, etc. */
+:root {
+  /* Colors */
+  --color-primary: #0071e3;
+  --color-secondary: #86868b;
+  --color-text: #1d1d1f;
+  --color-text-secondary: #86868b;
+  --color-background: #ffffff;
+  --color-background-secondary: #f5f5f7;
+  --color-border: #d2d2d7;
+  --color-success: #28cd41;
+  --color-error: #ff3b30;
+
+  /* Typography */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-size-base: 16px;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-xxl: 5rem;
+
+  /* Borders */
+  --border-radius-sm: 6px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 20px;
+  --border-width: 1px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+  /* Z-index layers */
+  --z-index-header: 1000;
+  --z-index-modal: 2000;
+  --z-index-tooltip: 3000;
+}
