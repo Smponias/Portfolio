@@ -393,12 +393,12 @@ p {
     border-image: linear-gradient(45deg, var(--color-primary), var(--color-secondary)) 1;
     background-color: transparent;
     color: var(--color-primary);
-    padding: 0.5rem 1.2rem;
+    padding: var(--spacing-md) var(--spacing-lg);
     border-radius: var(--border-radius-md);
     font-weight: var(--font-weight-medium);
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: var(--spacing-md);
     transition: background-image var(--transition-fast), color var(--transition-fast);
 }
 
@@ -571,17 +571,16 @@ p {
     background-color: var(--color-background);
     border-radius: var(--border-radius-lg);
     overflow: hidden;
-    box-shadow: var(--shadow-md);
-    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
 }
 
 .work-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-lg);
+transform: translateY(-10px) scale(1.02);
+box-shadow: var(--shadow-lg);
 }
 
 .work-image {
-    height: 200px;
+height: 200px;
+overflow: hidden;
     overflow: hidden;
 }
 
