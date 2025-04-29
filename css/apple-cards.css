@@ -51,14 +51,15 @@
 .highlight-pink { color: #ff2d55; }
 .highlight-yellow { color: #ffd60a; }
 :root:not(.dark-mode) .apple-card {
-  background: #f5f5f7 !important;
-  color: #222 !important;
-  box-shadow: none !important;
-}
-:root:not(.dark-mode) .apple-card {
-  background: #fff !important;
+  background: var(--color-background-secondary) !important;
   color: #111 !important;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* Override for foodie cards in light mode */
+:root:not(.dark-mode) .apple-card.foodie-card {
+  background: #ffffff !important;
+  color: #111 !important;
 }
 :root:not(.dark-mode) .apple-card .work-title {
   color: #111 !important;

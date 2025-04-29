@@ -517,6 +517,13 @@ p {
     transition: transform var(--transition-fast);
 }
 
+/* Light mode override for stat items */
+:root:not(.dark-mode) .stat-item {
+    background-color: var(--color-background-secondary) !important;
+    color: #111 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
 .stat-item:hover {
     transform: translateY(-5px);
 }

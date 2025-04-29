@@ -34,3 +34,11 @@
   justify-content: center;
   align-items: start;
 }
+
+/* Light mode override for foodie cards */
+:root:not(.dark-mode) .apple-card.foodie-card,
+:root:not(.dark-mode) .work-card.foodie-card {
+  background-color: #fff !important;
+  color: var(--color-text) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+}
