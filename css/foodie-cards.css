@@ -1,0 +1,16 @@
+/* Compact Apple-style cards for foodie section */
+.foodie-card {
+  min-width: 220px;
+  max-width: 320px;
+  min-height: unset;
+  padding: 1.2rem 1rem;
+}
+.foodie-card .work-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.foodie-card .work-description {
+  font-size: 0.98rem;
+  margin-bottom: 0.8rem;
+  color: inherit;
+}

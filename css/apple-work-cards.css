@@ -1,0 +1,297 @@
+/* ===== Apple-Style Project Cards (Clean, Light/Dark Mode) ===== */
+.work-card.apple-work-card, .apple-work-card {
+  background: #000 !important;
+  color: #fff !important;
+  border-radius: 2rem !important;
+  box-shadow: none !important;
+  padding: 2rem 1.5rem !important;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  transition: none !important;
+}
+:root:not(.dark-mode) .work-card.apple-work-card, :root:not(.dark-mode) .apple-work-card {
+  background: #fff !important;
+  color: #222 !important;
+}
+
+:root:not(.dark-mode) .work-card.apple-work-card, :root:not(.dark-mode) .apple-work-card {
+  background: #fff !important;
+  color: #222 !important;
+}
+.work-card.apple-work-card:hover, .apple-work-card:hover {
+  background: inherit !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+  background: inherit !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+  background: #fff !important;
+  color: #222 !important;
+  box-shadow: none !important;
+}
+:root:not(.dark-mode) .apple-work-card .work-title, .work-card.apple-work-card .work-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: inherit !important;
+}
+
+  color: #222 !important;
+}
+:root:not(.dark-mode) .apple-work-card .work-description, .work-card.apple-work-card .work-description {
+  color: inherit !important;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+  color: #222 !important;
+}
+.apple-learn-link {
+  color: #30d158 !important;
+  font-weight: 600;
+  margin-top: auto;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: none !important;
+  display: inline-block;
+}
+
+  color: #30d158 !important;
+  font-weight: 600;
+  margin-top: auto;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: none !important;
+  display: inline-block;
+}
+
+  color: #30d158 !important;
+}
+
+.work-card.apple-work-card, .apple-work-card {
+  background: #000 !important;
+  color: #fff !important;
+  border-radius: 2rem !important;
+  box-shadow: none !important;
+  padding: 2rem 1.5rem !important;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  transition: none !important;
+}
+:root:not(.dark-mode) .work-card.apple-work-card, :root:not(.dark-mode) .apple-work-card {
+  background: #fff !important;
+  color: #222 !important;
+}
+.work-card.apple-work-card:hover, .apple-work-card:hover {
+  background: inherit !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+  background: inherit !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+
+  color: #fff !important;
+  border-radius: 2rem !important;
+  box-shadow: none !important;
+  padding: 2rem 1.5rem !important;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  transition: none !important;
+}
+.apple-work-card:hover {
+  box-shadow: none !important;
+  transform: none !important;
+
+}
+.apple-work-card .work-title, .work-card.apple-work-card .work-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: inherit !important;
+}
+
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff !important;
+}
+.apple-work-card .work-description, .work-card.apple-work-card .work-description {
+  color: inherit !important;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+  color: #fff !important;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+.apple-learn-link {
+  color: #30d158 !important;
+  font-weight: 600;
+  margin-top: auto;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: none !important;
+  display: inline-block;
+}
+
+  color: #30d158 !important;
+  font-weight: 600;
+  margin-top: auto;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: none !important;
+  display: inline-block;
+}
+
+  color: #30d158 !important;
+  font-weight: 600;
+  margin-top: auto;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: none !important;
+  display: inline-block;
+}
+.apple-learn-link:hover {
+  color: #30d158 !important;
+  text-decoration: underline;
+}
+
+  color: #30d158 !important;
+  text-decoration: underline;
+}
+
+  color: #30d158 !important;
+  text-decoration: underline;
+
+}
+
+.work-card.apple-work-card, .apple-work-card {
+  background: #000 !important;
+  color: #fff !important;
+  border-radius: 2rem !important;
+  box-shadow: none !important;
+  padding: 2rem 1.5rem !important;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  transition: none !important;
+}
+:root:not(.dark-mode) .work-card.apple-work-card, :root:not(.dark-mode) .apple-work-card {
+  background: #fff !important;
+  color: #222 !important;
+}
+.work-card.apple-work-card:hover, .apple-work-card:hover {
+  background: inherit !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+  background: inherit !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+
+  color: #fff !important;
+  border-radius: 2rem !important;
+  box-shadow: none !important;
+  padding: 2rem 1.5rem !important;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  transition: none !important;
+}
+.apple-work-card:hover {
+  box-shadow: none !important;
+  transform: none !important;
+
+}
+.apple-work-card .work-title, .work-card.apple-work-card .work-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: inherit !important;
+}
+
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff !important;
+}
+.apple-work-card .work-description, .work-card.apple-work-card .work-description {
+  color: inherit !important;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+  color: #fff !important;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+.apple-learn-link {
+  color: #30d158 !important;
+  font-weight: 600;
+  margin-top: auto;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: none !important;
+  display: inline-block;
+}
+
+  color: #30d158 !important;
+  font-weight: 600;
+  margin-top: auto;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: none !important;
+  display: inline-block;
+}
+
+  color: #30d158 !important;
+  font-weight: 600;
+  margin-top: auto;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: none !important;
+  display: inline-block;
+}
+.apple-learn-link:hover {
+  color: #30d158 !important;
+  text-decoration: underline;
+}
+
+  color: #30d158 !important;
+  text-decoration: underline;
+}
+
+  color: #30d158 !important;
+  text-decoration: underline;
+
+}

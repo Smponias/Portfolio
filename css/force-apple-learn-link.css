@@ -1,0 +1,13 @@
+a.apple-learn-link,
+.apple-learn-link {
+  color: #30d158 !important;
+  font-weight: 600;
+  text-decoration: none;
+  transition: none !important;
+  display: inline-block;
+}
+a.apple-learn-link:hover,
+.apple-learn-link:hover {
+  color: #30d158 !important;
+  text-decoration: underline;
+}
