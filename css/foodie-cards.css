@@ -1,9 +1,13 @@
 /* Compact Apple-style cards for foodie section */
 .foodie-card {
-  min-width: 220px;
-  max-width: 320px;
+  /* Set full height to align content */
+  height: 100%;
   min-height: unset;
   padding: 1.2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
 }
 .foodie-card .work-title {
   font-size: 1.1rem;
@@ -13,4 +17,20 @@
   font-size: 0.98rem;
   margin-bottom: 0.8rem;
   color: inherit;
+}
+.foodie-card .apple-learn-link {
+  margin-top: auto;
+}
+
+/* Center food cards group and uniform heights */
+.food-cta {
+  text-align: center;
+}
+.food-cta .apple-cards-grid {
+  display: inline-grid !important;
+  grid-template-columns: repeat(3, 280px) !important;
+  gap: var(--spacing-lg);
+  grid-auto-rows: 1fr;
+  justify-content: center;
+  justify-items: center;
 }
