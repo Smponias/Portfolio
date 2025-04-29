@@ -4,6 +4,7 @@ export function initContactForm() {
   const contactForm = document.getElementById('contactForm');
   if (!contactForm) return;
 
+  /* Contact form submission disabled
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const name = document.getElementById('name').value;
@@ -18,4 +19,5 @@ export function initContactForm() {
       alert('Please fill in all fields.');
     }
   });
+  */
 }

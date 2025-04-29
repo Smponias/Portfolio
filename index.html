@@ -5,46 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alexandros Smponias | Mobile Solution Architect</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="preload" href="css/index.css" as="style">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Apple-style font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="modulepreload" href="js/app.js">
 </head>
 <body>
-    <!-- Header with glass-like transparency -->
-    <header class="header">
-        <div class="container header-container">
-            <div class="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#work" class="nav-link">Work</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#food" class="nav-link">Food</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-            <button class="dark-mode-toggle" aria-label="Toggle dark mode">
-                <!-- icons -->
-            </button>
-        </div>
-    </header>
+    <a href="#main-content" class="skip-link" aria-label="Skip to main content">Skip to main content</a>
+    <div data-include="./partials/header.html"></div>
 
     <!-- Hero Section with Typing Animation -->
-    <section id="home" class="hero-section">
+    <main id="main-content" role="main">
+    <section id="home" class="hero-section" aria-labelledby="hero-title">
         <div class="parallax-bg"></div>
         <div class="container hero-content">
-            <h1 class="hero-title">
+            <h1 id="hero-title" class="hero-title">
                 <span>Hi, I'm Alex</span>
             </h1>
             <div class="hero-subtitle">
-                <span class="typing-text"></span>
+                <span class="typing-text" aria-live="polite"></span>
             </div>
             <div class="hero-cta">
                 <a href="#work" class="cta-button">Explore My Work</a>
@@ -75,7 +57,7 @@
             </div>
             <div class="about-content">
                 <div class="about-image parallax-element">
-                    <img src="images/profile.jpg" alt="Alexandros Smponias" class="profile-image">
+                    <img src="images/profile.jpg" alt="Alexandros Smponias" class="profile-image" loading="lazy">
                 </div>
                 <div class="about-text">
                     <p class="lead-text">I'm a Mobile Solution Architect with a passion for creating intuitive digital experiences that blend technical excellence with exceptional user experience.</p>
@@ -114,50 +96,46 @@
             </div>
             <div class="work-categories">
                 <button class="category-button active" data-category="all">All</button>
-                <button class="category-button" data-category="mobile">Mobile Apps</button>
-                <button class="category-button" data-category="ux">UX Design</button>
-                <button class="category-button" data-category="game">Game Development</button>
+                <button class="category-button" data-category="work">💼&nbsp;&nbsp;Work</button>
+                <button class="category-button" data-category="projects">📱 Projects</button>
             </div>
             <div class="work-grid">
-                <!-- Mobile App Projects -->
-                <div class="work-item" data-category="mobile">
+                <!-- Corporate Work Stops -->
+                <div class="work-item" data-category="work">
                     <div class="work-card apple-work-card">
-    <h3 class="work-title">Bosch Mobile Solution</h3>
-    <p class="work-description">A native iOS and Android application for industrial solutions with a focus on user experience.</p>
-    <a href="projects/project.html" class="work-link apple-learn-link">Learn more &rsaquo;</a>
-</div>
+                        <h3 class="work-title">💼 Bosch</h3>
+                        <p class="work-description">Joined as Mobile Solution Architect. Developing Native Apps, running a Mobile Community and doing Agile Coaching.</p>
+                        <a href="#" class="work-link apple-learn-link">(Coming Soon) Learn more &rsaquo;</a>
+                    </div>
                 </div>
-                <div class="work-item" data-category="mobile">
+                <div class="work-item" data-category="work">
                     <div class="work-card apple-work-card">
-    <h3 class="work-title">Netze BW App</h3>
-    <p class="work-description">Lead iOS development for a utility management application using Swift and VIPER architecture.</p>
-    <a href="#" class="work-link apple-learn-link">Learn more &rsaquo;</a>
-</div>
+                        <h3 class="work-title">💼 EnBW & Netze BW</h3>
+                        <p class="work-description">Lead iOS development for a utility management application using Swift and VIPER architecture.</p>
+                        <a href="#" class="work-link apple-learn-link">(Coming Soon) Learn more &rsaquo;</a>
+                    </div>
                 </div>
-                
-                <!-- UX Design Projects -->
-                <div class="work-item" data-category="ux">
+                <div class="work-item" data-category="work">
                     <div class="work-card apple-work-card">
-    <h3 class="work-title">User Experience Redesign</h3>
-    <p class="work-description">Complete UX overhaul for an enterprise application, focusing on user-centered design principles.</p>
-    <a href="#" class="work-link apple-learn-link">Learn more &rsaquo;</a>
-</div>
+                        <h3 class="work-title">💼 GMGStudio</h3>
+                        <p class="work-description">Entrepreneurial venture developing mobile games, designing engaging experiences and creative content.</p>
+                        <a href="#" class="work-link apple-learn-link">(Coming Soon) Learn more &rsaquo;</a>
+                    </div>
                 </div>
-                
-                <!-- Game Development Projects -->
-                <div class="work-item" data-category="game">
+                <!-- Personal Projects -->
+                <div class="work-item" data-category="projects">
                     <div class="work-card apple-work-card">
-    <h3 class="work-title">GMGStudio Mobile Game</h3>
-    <p class="work-description">Unity-based mobile game with innovative gameplay mechanics and engaging user interface.</p>
-    <a href="#" class="work-link apple-learn-link">Learn more &rsaquo;</a>
-</div>
+                        <h3 class="work-title">📱 OKR Tracking App</h3>
+                        <p class="work-description">TODO</p>
+                        <a href="#" class="work-link apple-learn-link">(Coming Soon) Learn more &rsaquo;</a>
+                    </div>
                 </div>
-                <div class="work-item" data-category="game">
+                <div class="work-item" data-category="projects">
                     <div class="work-card apple-work-card">
-    <h3 class="work-title">BitDuel</h3>
-    <p class="work-description">Entrepreneurial venture creating a competitive mobile game for iOS and Android platforms.</p>
-    <a href="#" class="work-link apple-learn-link">Learn more &rsaquo;</a>
-</div>
+                        <h3 class="work-title">📱 BitDuel</h3>
+                        <p class="work-description">TODO</p>
+                        <a href="#" class="work-link apple-learn-link">(Coming Soon) Learn more &rsaquo;</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -265,17 +243,17 @@
                   <div class="apple-card foodie-card">
   <h3 class="work-title">Instagram</h3>
   <p class="work-description">Daily food pics & stories from Stuttgart’s best spots.</p>
-  <a href="https://www.instagram.com/stuttgartfoodiealex/" class="apple-learn-link" target="_blank">Follow on Instagram</a>
+  <a href="https://www.instagram.com/stuttgartfoodiealex/" class="apple-learn-link" target="_blank" rel="noopener">Follow on Instagram</a>
 </div>
 <div class="apple-card foodie-card">
   <h3 class="work-title">YouTube</h3>
   <p class="work-description">Vlogs, reviews, and behind-the-scenes from my foodie adventures.</p>
-  <a href="#" class="apple-learn-link" target="_blank">Follow on YouTube</a>
+  <a href="http://www.youtube.com/@StuttgartFoodieAlex" class="apple-learn-link" target="_blank" rel="noopener">Follow on YouTube</a>
 </div>
 <div class="apple-card foodie-card">
   <h3 class="work-title">TikTok</h3>
   <p class="work-description">Quick bites, trends, and fun food challenges.</p>
-  <a href="#" class="apple-learn-link" target="_blank">Follow on TikTok</a>
+  <a href="https://www.tiktok.com/@stuttgartfoodiealex" class="apple-learn-link" target="_blank" rel="noopener">Follow on TikTok</a>
 </div>
                 </div>
             </div>
@@ -298,13 +276,13 @@
                     <div class="info-group">
                         <h3>Connect</h3>
                         <div class="social-links">
-                            <a href="https://www.linkedin.com/in/smponias" class="social-icon" target="_blank" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/in/smponias/" class="social-icon" target="_blank" aria-label="LinkedIn" rel="noopener">
                                 <i class="fab fa-linkedin" aria-hidden="true"></i>
                             </a>
-                            <a href="https://www.instagram.com/stuttgartfoodiealex/" class="social-icon" target="_blank" aria-label="Instagram">
-                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                            <a href="https://x.com/alexsmponias" class="social-icon" target="_blank" aria-label="Twitter" rel="noopener">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
                             </a>
-                            <a href="https://github.com/" class="social-icon" target="_blank" aria-label="GitHub">
+                            <a href="https://github.com/Smponias" class="social-icon" target="_blank" aria-label="GitHub" rel="noopener">
                                 <i class="fab fa-github" aria-hidden="true"></i>
                             </a>
                         </div>
@@ -314,61 +292,15 @@
                         <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
                     </div>
                 </div>
-                <div class="contact-form-container">
-                    <form id="contactForm" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-button cta-button">Send Message</button>
-                    </form>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>Alexandros Smponias</h3>
-                    <p>Mobile Solution Architect</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#work">Work</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#food">Food</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/smponias" class="social-icon" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-                    <a href="https://www.instagram.com/stuttgartfoodiealex/" class="social-icon" target="_blank" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                    <a href="https://github.com/" class="social-icon" target="_blank" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Alexandros Smponias. All rights reserved.</p>
-            </div>
-        </div>
-        <a href="#home" class="back-to-top"><span class="top-arrow"></span></a>
-    </footer>
+    </main>
+    <footer class="footer" role="contentinfo">
+    <div data-include="./partials/footer.html"></div>
 
     <!-- JavaScript -->
-    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/app.js" defer></script>
 </body>
 </html>

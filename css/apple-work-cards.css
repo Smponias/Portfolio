@@ -6,7 +6,7 @@
   background-color: var(--color-background-secondary);
   color: var(--color-text);
   padding: var(--spacing-lg);
-  min-height: 180px;
+  min-height: 260px; /* allow variable height */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -21,9 +21,16 @@
 
 .apple-work-card .work-description,
 .work-card.apple-work-card .work-description {
-  flex: 1;
+  flex: 1; /* fill space and push link down */
   font-size: 1rem;
   margin-bottom: var(--spacing-md);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2; /* standard property for compatibility */
+  -webkit-text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
 
 .apple-work-card .apple-learn-link,
@@ -36,6 +43,15 @@
 .apple-work-card .apple-learn-link:hover,
 .work-card.apple-work-card .apple-learn-link:hover {
   text-decoration: underline;
+}
+
+/* Group headings in My Work section */
+.company-title {
+  grid-column: 1 / -1;
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  margin: var(--spacing-lg) 0 var(--spacing-md);
+  color: var(--color-text);
 }
 
 /* Dark mode override: pure black cards */
