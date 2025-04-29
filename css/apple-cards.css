@@ -1,0 +1,56 @@
+/* ===== Apple-Style Highlight Cards (Homepage) ===== */
+.apple-cards-section {
+  padding: var(--spacing-xxl) 0;
+  background: #fff;
+}
+.apple-cards-grid {
+  display: flex;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.apple-card {
+  background: #000;
+  color: #fff;
+  border-radius: 2rem;
+  padding: 2.5rem 2rem 1.5rem 2rem;
+  width: 320px;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  margin: 0 1rem 2rem 0;
+  transition: box-shadow 0.2s, transform 0.2s;
+  text-align: center;
+}
+.apple-card:hover {
+  box-shadow: 0 16px 48px rgba(0,0,0,0.18);
+  transform: translateY(-6px) scale(1.03);
+}
+.card-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.card-content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.1;
+  text-align: center;
+  width: 100%;
+}
+.highlight-green { color: #39ff14; }
+.highlight-blue { color: #2997ff; }
+.highlight-pink { color: #ff2d55; }
+.highlight-yellow { color: #ffd60a; }
+@media (max-width: 900px) {
+  .apple-cards-grid { flex-direction: column; align-items: center; }
+  .apple-card { width: 90vw; min-width: 0; }
+}
