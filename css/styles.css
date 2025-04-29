@@ -626,6 +626,41 @@ overflow: hidden;
     transform: translateX(5px);
 }
 
+/* Override My Work card hover: keep color stable */
+.work-card.apple-work-card:hover,
+.apple-work-card:hover {
+  background: #000 !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+:root:not(.dark-mode) .work-card.apple-work-card:hover,
+:root:not(.dark-mode) .apple-work-card:hover {
+  background: #fff !important;
+  color: #222 !important;
+}
+
+/* Prevent My Work card text color change on hover */
+.work-card.apple-work-card:hover .work-title,
+.apple-work-card:hover .work-title,
+.work-card.apple-work-card:hover .work-description,
+.apple-work-card:hover .work-description {
+  color: inherit !important;
+}
+
+/* Force Learn More link color and underline only */
+.apple-learn-link,
+a.apple-learn-link {
+  color: #30d158 !important;
+  text-decoration: none;
+  transition: none !important;
+}
+.apple-learn-link:hover,
+a.apple-learn-link:hover {
+  color: #30d158 !important;
+  text-decoration: underline;
+}
+
 /* ===== Skills Section ===== */
 .skills-section {
     padding: var(--spacing-xxl) 0;
@@ -1148,6 +1183,12 @@ overflow: hidden;
     will-change: transform;
 }
 
+/* Reveal sections: ensure content always visible */
+.reveal-section {
+  overflow: visible !important;
+  /* allow reveal-animation without clipping */
+}
+
 /* ===== Responsive Styles ===== */
 @media (max-width: 1024px) {
     h1 {
@@ -1247,4 +1288,15 @@ overflow: hidden;
         flex-direction: column;
         gap: var(--spacing-md);
     }
+}
+
+/* ===== Scroll Reveal Animations ===== */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

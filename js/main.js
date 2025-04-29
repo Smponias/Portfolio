@@ -65,7 +65,7 @@ function initNavigation() {
 
 // Scroll animations using Intersection Observer
 function initScrollAnimations() {
-    const animatedElements = document.querySelectorAll('.about-content, .work-item, .skill-category, .food-gallery, .contact-content');
+    const animatedElements = document.querySelectorAll('.work-item, .skill-category, .food-gallery, .contact-content');
     
     const animationObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {

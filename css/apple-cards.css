@@ -3,18 +3,22 @@
   padding: var(--spacing-xxl) 0;
   background: #fff;
 }
+/* ===== Highlight Cards Grid ===== */
 .apple-cards-grid {
-  display: flex;
+  display: grid;
   gap: var(--spacing-lg);
-  flex-wrap: wrap;
   justify-content: center;
+  justify-items: center;
+  /* 4 columns fixed width */
+  grid-template-columns: repeat(4, 280px);
 }
 .apple-card {
+  width: 100%;
+  max-width: 280px;
   background: #000;
   color: #fff;
   border-radius: 2rem;
   padding: 2.5rem 2rem 1.5rem 2rem;
-  width: 320px;
   min-height: 340px;
   display: flex;
   flex-direction: column;
@@ -22,7 +26,6 @@
   align-items: center;
   position: relative;
   box-shadow: 0 8px 32px rgba(0,0,0,0.15);
-  margin: 0 1rem 2rem 0;
   transition: box-shadow 0.2s, transform 0.2s;
   text-align: center;
 }
@@ -55,6 +58,7 @@
   color: #222 !important;
   box-shadow: none !important;
 }
+:root:not(.dark-mode) .apple-card {
   background: #fff !important;
   color: #111 !important;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
@@ -77,8 +81,20 @@
   text-decoration: underline;
 }
 
+/* Prevent clipping of highlight cards after reveal */
+.apple-cards-section.reveal-section.revealed {
+  overflow: visible !important;
+}
 
-@media (max-width: 900px) {
-  .apple-cards-grid { flex-direction: column; align-items: center; }
-  .apple-card { width: 90vw; min-width: 0; }
+/* 2 columns for medium screens */
+@media (max-width: 1140px) {
+  .apple-cards-grid {
+    grid-template-columns: repeat(2, 280px);
+  }
+}
+/* Single column for small screens */
+@media (max-width: 640px) {
+  .apple-cards-grid {
+    grid-template-columns: repeat(1, 280px);
+  }
 }

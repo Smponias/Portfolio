@@ -11,3 +11,36 @@ a.apple-learn-link:hover,
   color: #30d158 !important;
   text-decoration: underline;
 }
+
+/* Reveal-section override: ensure all sections are visible */
+.reveal-section,
+.reveal-section.revealed {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+  overflow: visible !important;
+}
+
+/* Ensure scroll animations reveal content */
+.animate-on-scroll.animated {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Always show About section content */
+.about-content.animate-on-scroll,
+.about-content.animate-on-scroll.animated {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Ensure About section is always visible */
+#about,
+#about *,
+.about-section,
+.about-section * {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+  overflow: visible !important;
+}
