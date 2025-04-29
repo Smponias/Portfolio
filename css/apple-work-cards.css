@@ -1,287 +1,46 @@
-/* ===== Apple-Style Project Cards (Clean, Light/Dark Mode) ===== */
-.work-card.apple-work-card, .apple-work-card {
-  background: #000 !important;
-  color: #fff !important;
-  box-shadow: none !important;
-  padding: 2rem 1.5rem !important;
+@import "components/card.css";
+
+/* Apple-Style Work Cards */
+.apple-work-card,
+.work-card.apple-work-card {
+  background-color: var(--color-background-secondary);
+  color: var(--color-text);
+  padding: var(--spacing-lg);
   min-height: 180px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
-  text-align: left;
-}
-:root:not(.dark-mode) .work-card.apple-work-card, :root:not(.dark-mode) .apple-work-card {
-  background: #fff !important;
-  color: #222 !important;
 }
 
-:root:not(.dark-mode) .work-card.apple-work-card, :root:not(.dark-mode) .apple-work-card {
-  background: #fff !important;
-  color: #222 !important;
-}
-.work-card.apple-work-card:hover, .apple-work-card:hover {
-  background: inherit !important;
-  box-shadow: none !important;
-  transform: none !important;
-}
-
-  background: inherit !important;
-  box-shadow: none !important;
-  transform: none !important;
-}
-
-  background: #fff !important;
-  color: #222 !important;
-  box-shadow: none !important;
-}
-:root:not(.dark-mode) .apple-work-card .work-title, .work-card.apple-work-card .work-title {
+.apple-work-card .work-title,
+.work-card.apple-work-card .work-title {
   font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: inherit !important;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-sm);
 }
 
-  color: #222 !important;
-}
-:root:not(.dark-mode) .apple-work-card .work-description, .work-card.apple-work-card .work-description {
-  color: inherit !important;
+.apple-work-card .work-description,
+.work-card.apple-work-card .work-description {
+  flex: 1;
   font-size: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--spacing-md);
 }
 
-  color: #222 !important;
-}
-.apple-learn-link {
-  color: #30d158 !important;
-  font-weight: 600;
+.apple-work-card .apple-learn-link,
+.work-card.apple-work-card .apple-learn-link {
   margin-top: auto;
+  color: var(--color-primary);
   text-decoration: none;
-  font-size: 1rem;
-  transition: none !important;
-  display: inline-block;
 }
 
-  color: #30d158 !important;
-  font-weight: 600;
-  margin-top: auto;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: none !important;
-  display: inline-block;
-}
-
-  color: #30d158 !important;
-}
-
-.work-card.apple-work-card, .apple-work-card {
-  background: #000 !important;
-  color: #fff !important;
-  box-shadow: none !important;
-  padding: 2rem 1.5rem !important;
-  min-height: 180px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-align: left;
-}
-:root:not(.dark-mode) .work-card.apple-work-card, :root:not(.dark-mode) .apple-work-card {
-  background: #fff !important;
-  color: #222 !important;
-}
-.work-card.apple-work-card:hover, .apple-work-card:hover {
-  background: inherit !important;
-  box-shadow: none !important;
-  transform: none !important;
-}
-
-  background: inherit !important;
-  box-shadow: none !important;
-  transform: none !important;
-}
-
-
-  color: #fff !important;
-  box-shadow: none !important;
-  padding: 2rem 1.5rem !important;
-  min-height: 180px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-align: left;
-}
-.apple-work-card:hover {
-  box-shadow: none !important;
-  transform: none !important;
-
-}
-.apple-work-card .work-title, .work-card.apple-work-card .work-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: inherit !important;
-}
-
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #fff !important;
-}
-.apple-work-card .work-description, .work-card.apple-work-card .work-description {
-  color: inherit !important;
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-  color: #fff !important;
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-.apple-learn-link {
-  color: #30d158 !important;
-  font-weight: 600;
-  margin-top: auto;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: none !important;
-  display: inline-block;
-}
-
-  color: #30d158 !important;
-  font-weight: 600;
-  margin-top: auto;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: none !important;
-  display: inline-block;
-}
-
-  color: #30d158 !important;
-  font-weight: 600;
-  margin-top: auto;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: none !important;
-  display: inline-block;
-}
-.apple-learn-link:hover {
-  color: #30d158 !important;
+.apple-work-card .apple-learn-link:hover,
+.work-card.apple-work-card .apple-learn-link:hover {
   text-decoration: underline;
 }
 
-  color: #30d158 !important;
-  text-decoration: underline;
-}
-
-  color: #30d158 !important;
-  text-decoration: underline;
-
-}
-
-.work-card.apple-work-card, .apple-work-card {
-  background: #000 !important;
+/* Dark mode override: pure black cards */
+:root.dark-mode .apple-work-card,
+:root.dark-mode .work-card.apple-work-card {
+  background-color: #000 !important;
   color: #fff !important;
-  box-shadow: none !important;
-  padding: 2rem 1.5rem !important;
-  min-height: 180px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-align: left;
-}
-:root:not(.dark-mode) .work-card.apple-work-card, :root:not(.dark-mode) .apple-work-card {
-  background: #fff !important;
-  color: #222 !important;
-}
-.work-card.apple-work-card:hover, .apple-work-card:hover {
-  background: inherit !important;
-  box-shadow: none !important;
-  transform: none !important;
-}
-
-  background: inherit !important;
-  box-shadow: none !important;
-  transform: none !important;
-}
-
-
-  color: #fff !important;
-  box-shadow: none !important;
-  padding: 2rem 1.5rem !important;
-  min-height: 180px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-align: left;
-}
-.apple-work-card:hover {
-  box-shadow: none !important;
-  transform: none !important;
-
-}
-.apple-work-card .work-title, .work-card.apple-work-card .work-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: inherit !important;
-}
-
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #fff !important;
-}
-.apple-work-card .work-description, .work-card.apple-work-card .work-description {
-  color: inherit !important;
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-  color: #fff !important;
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-.apple-learn-link {
-  color: #30d158 !important;
-  font-weight: 600;
-  margin-top: auto;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: none !important;
-  display: inline-block;
-}
-
-  color: #30d158 !important;
-  font-weight: 600;
-  margin-top: auto;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: none !important;
-  display: inline-block;
-}
-
-  color: #30d158 !important;
-  font-weight: 600;
-  margin-top: auto;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: none !important;
-  display: inline-block;
-}
-.apple-learn-link:hover {
-  color: #30d158 !important;
-  text-decoration: underline;
-}
-
-  color: #30d158 !important;
-  text-decoration: underline;
-}
-
-  color: #30d158 !important;
-  text-decoration: underline;
-
 }
