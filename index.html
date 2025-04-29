@@ -1,153 +1,306 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alex - App Developer with a ❤️ for UX</title>
-  
-  <!-- Primary Meta Tags -->
-  <meta name="description" content="My Portfolio – I started developing native iOS Apps almost 10 years ago!
-I am also into native Android Development and good User Experience is a must for me!" />
-  <meta name="keywords" content="Alex, App Developer, Portfolio, UX Design, Mobile Apps, Creative Developer, Innovative Projects" />
-  <link rel="canonical" href="https://alex.smponias.de" />
-  <meta property="og:type" content="website">
-  <meta name="title" property="og:title" content="Alex - App Developer with a ❤️ for UX">
-
-  
-  <!-- CSS Files -->
-  <link rel="stylesheet" href="styles/variables.css" />
-  <link rel="stylesheet" href="styles/main.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexandros Smponias | Mobile Solution Architect</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preload" href="css/index.css" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Apple-style font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="modulepreload" href="js/app.js">
 </head>
 <body>
-  <header class="site-header" role="banner">
-    <nav class="navbar" role="navigation" aria-label="Main Navigation">
-      <div class="navbar-left">
-        <ul class="nav-links">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Work</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="navbar-right">
-        <button class="hamburger" aria-label="Toggle navigation menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </nav>
-  </header>
+    <a href="#main-content" class="skip-link" aria-label="Skip to main content">Skip to main content</a>
+    <div data-include="./partials/header.html"></div>
 
-  <!-- Hero Section -->
-  <section id="hero" aria-label="Hero Section">
-    <div class="hero-content">
-      <!-- Update this link to point to your actual resume file or external URL -->
-      <a href="YourResume.pdf" class="cta-top-button" download>Get My Resume (Coming Soon)</a>
-      <h1>
-        Hi, I'm Alex <span class="highlight" id="typing"></span>
-      </h1>
-      <p>
-        App Developer &amp; UX Enthusiast dedicated to crafting seamless digital experiences.
-      </p>
-      <div class="hero-buttons">
-        <a href="#projects" class="cta-button cta-pill cta-primary">Explore My Work</a>
-        <a href="#contact" class="cta-button cta-pill">Get in Touch</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Main Content -->
-  <main>
-    <!-- About Section -->
-    <section id="about" aria-label="About Me Section">
-      <div class="section-content">
-        <h2>About Me</h2>
-        <div class="about-content">
-          <div class="about-image">
-            <!-- Replace with your actual profile image -->
-            <img src="assets/Alex.jpg" alt="Profile image of Alex" />
-          </div>
-          <div class="about-text">
-            <p>
-              I’m Alex, a user-focused app developer passionate about building intuitive digital experiences. With expertise in UX design and a background in architecture, I bring a holistic approach to turning ideas into polished, user-friendly applications.
-            </p>
-            <br />
-            <p>
-              When I’m not coding, I explore the local culinary scene as StuttgartFoodie Alex—discovering hidden gems and sharing my experiences with fellow food enthusiasts.
-            </p>
-          </div>
+    <!-- Hero Section with Typing Animation -->
+    <main id="main-content" role="main">
+    <section id="home" class="hero-section" aria-labelledby="hero-title">
+        <div class="parallax-bg"></div>
+        <div class="container hero-content">
+            <h1 id="hero-title" class="hero-title">
+                <span>Hi, I'm Alex</span>
+            </h1>
+            <div class="hero-subtitle">
+                <span class="typing-text" aria-live="polite"></span>
+            </div>
+            <div class="hero-cta">
+                <a href="#work" class="cta-button">Explore My Work</a>
+                <a href="#contact" class="cta-link">Get in Touch</a>
+            </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" aria-label="Projects Section">
-      <div class="section-content">
-        <h2>My Work</h2>
-        <div class="project-container">
-          <div class="project-card">
-            <h3>Projects Coming Soon</h3>
-            <p>Stay tuned for updates on my latest work and case studies.</p>
-            <a href="#" class="project-link">Learn More</a>
-          </div>
+        <div class="scroll-indicator">
+            <span class="scroll-arrow"></span>
+            <span class="scroll-text">Scroll to discover</span>
         </div>
+    </section>
+
+    <!-- Apple-Style Highlight Cards -->
+    <section class="apple-cards-section">
+      <div class="container apple-cards-grid">
+        <div class="apple-card"><div class="card-content"><h3><span class="highlight-green">7+ years</span><br>of building <span class="highlight-blue">mobile apps</span></h3></div></div>
+        <div class="apple-card"><div class="card-content"><h3><span class="highlight-pink">Swift</span> & <span class="highlight-blue">Kotlin</span><br>expert</h3></div></div>
+        <div class="apple-card"><div class="card-content"><h3><span class="highlight-yellow">Leader</span> &<br><span class="highlight-green">Mentor</span></h3></div></div>
+        <div class="apple-card"><div class="card-content"><h3><span class="highlight-blue">Design</span> meets<br><span class="highlight-pink">Engineering</span></h3></div></div>
       </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" aria-label="Skills Section">
-      <div class="section-content">
-        <h2>Technical Skills</h2>
-        <div class="skills-container">
-          <div class="skill-item">iOS Development</div>
-          <div class="skill-item">Android Development</div>
-          <div class="skill-item">Swift</div>
-          <div class="skill-item">SwiftUI</div>
-          <div class="skill-item">Kotlin</div>
-          <div class="skill-item">Jetpack Compose</div>
-          <div class="skill-item">GitHub Actions</div>
-          <div class="skill-item">Azure DevOps</div>
-          <div class="skill-item">Domain Driven Design</div>
-          <div class="skill-item">ARC42</div>
+    <!-- About Section with Split Layout -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image parallax-element">
+                    <img src="images/profile.jpg" alt="Alexandros Smponias" class="profile-image" loading="lazy">
+                </div>
+                <div class="about-text">
+                    <p class="lead-text">I'm a Mobile Solution Architect with a passion for creating intuitive digital experiences that blend technical excellence with exceptional user experience.</p>
+                    
+                    <p>With over 7 years of experience in mobile development, I've mastered both iOS and Android platforms, specializing in Swift and Kotlin. My background in architecture allows me to bring a holistic approach to turning complex ideas into polished, user-friendly applications.</p>
+                    
+                    <p>Currently working at Bosch Digital, I architect mobile solutions that combine innovation with practicality. I'm also an entrepreneur running GMGStudio, where I develop mobile games, design engaging experiences, and produce creative content.</p>
+                    
+                    <p>When I'm not coding, I explore the local culinary scene as StuttgartFoodie Alex—discovering hidden gems and sharing my experiences with fellow food enthusiasts.</p>
+                    
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <span class="stat-number gradient-text">7+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number gradient-text">2</span>
+                            <span class="stat-label">Languages</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number gradient-text">∞</span>
+                            <span class="stat-label">Creativity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" aria-label="Contact Section">
-      <div class="section-content">
-        <h2>Get in Touch</h2>
-        <p>
-          I'm always excited to collaborate on innovative projects or simply chat about ideas.
-          Send me a message, and I'll get back to you soon! (Coming Soon!)
-        </p>
-        <!--
-        <form class="contact-form" action="#" method="POST">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-          <button type="submit" class="cta-button cta-pill cta-primary">Send Message</button>
-        </form>
-        -->
-      </div>
+    <!-- Work Section with Grid Layout -->
+    <section id="work" class="work-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Work</h2>
+                <p class="section-subtitle">A selection of my professional projects and personal endeavors</p>
+            </div>
+            <div class="work-categories">
+                <button class="category-button active" data-category="all">All</button>
+                <button class="category-button" data-category="work">💼&nbsp;&nbsp;Work</button>
+                <button class="category-button" data-category="projects">📱 Projects</button>
+            </div>
+            <div class="work-grid">
+                <!-- Corporate Work Stops -->
+                <div class="work-item" data-category="work">
+                    <div class="work-card apple-work-card">
+                        <h3 class="work-title">💼 Bosch</h3>
+                        <p class="work-description">Joined as Mobile Solution Architect. Developing Native Apps, running a Mobile Community and doing Agile Coaching.</p>
+                        <a href="#" class="work-link apple-learn-link">(Coming Soon) Learn more &rsaquo;</a>
+                    </div>
+                </div>
+                <div class="work-item" data-category="work">
+                    <div class="work-card apple-work-card">
+                        <h3 class="work-title">💼 EnBW & Netze BW</h3>
+                        <p class="work-description">Lead iOS development for a utility management application using Swift and VIPER architecture.</p>
+                        <a href="#" class="work-link apple-learn-link">(Coming Soon) Learn more &rsaquo;</a>
+                    </div>
+                </div>
+                <div class="work-item" data-category="work">
+                    <div class="work-card apple-work-card">
+                        <h3 class="work-title">💼 GMGStudio</h3>
+                        <p class="work-description">Entrepreneurial venture developing mobile games, designing engaging experiences and creative content.</p>
+                        <a href="#" class="work-link apple-learn-link">(Coming Soon) Learn more &rsaquo;</a>
+                    </div>
+                </div>
+                <!-- Personal Projects -->
+                <div class="work-item" data-category="projects">
+                    <div class="work-card apple-work-card">
+                        <h3 class="work-title">📱 OKR Tracking App</h3>
+                        <p class="work-description">TODO</p>
+                        <a href="#" class="work-link apple-learn-link">(Coming Soon) Learn more &rsaquo;</a>
+                    </div>
+                </div>
+                <div class="work-item" data-category="projects">
+                    <div class="work-card apple-work-card">
+                        <h3 class="work-title">📱 BitDuel</h3>
+                        <p class="work-description">TODO</p>
+                        <a href="#" class="work-link apple-learn-link">(Coming Soon) Learn more &rsaquo;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <!-- Footer -->
-  <footer role="contentinfo">
-    <div class="footer-content">
-      <p>Developed by Alex with ❤️</p>
-      <div class="social-links">
-        <a href="https://x.com/alexsmponias" target="_blank">Twitter</a>
-        <a href="https://github.com/Smponias" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/smponias/" target="_blank">LinkedIn</a>
-      </div>
-    </div>
-  </footer>
+    <!-- Skills Section with Horizontal Carousel -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">My professional toolkit and expertise</p>
+            </div>
+            <div class="skills-carousel">
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <img src="images/ios-dev-logo.png" alt="iOS Development">
+                    </div>
+                    <h3 class="skill-title">iOS Development</h3>
+                    <ul class="skill-list">
+                        <li>Swift</li>
+                        <li>SwiftUI</li>
+                        <li>UIKit</li>
+                        <li>VIPER Architecture</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <img src="images/android-dev-logo.png" alt="Android Development">
+                    </div>
+                    <h3 class="skill-title">Android Development</h3>
+                    <ul class="skill-list">
+                        <li>Kotlin</li>
+                        <li>Jetpack Compose</li>
+                        <li>Android SDK</li>
+                        <li>Material Design</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <img src="images/architect-icon.png" alt="Architecture">
+                    </div>
+                    <h3 class="skill-title">Architecture</h3>
+                    <ul class="skill-list">
+                        <li>Solution Architecture</li>
+                        <li>Domain Driven Design</li>
+                        <li>ARC42</li>
+                        <li>Design Patterns</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <img src="images/ux-logo.png" alt="UX Design">
+                    </div>
+                    <h3 class="skill-title">UX Design</h3>
+                    <ul class="skill-list">
+                        <li>User Research</li>
+                        <li>Wireframing</li>
+                        <li>Prototyping</li>
+                        <li>Usability Testing</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <img src="images/dev-ops-logo.png" alt="DevOps">
+                    </div>
+                    <h3 class="skill-title">DevOps</h3>
+                    <ul class="skill-list">
+                        <li>GitHub Actions</li>
+                        <li>Azure DevOps</li>
+                        <li>CI/CD Pipelines</li>
+                        <li>Test Automation</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="carousel-control prev" aria-label="Previous skills">
+                    <span class="control-icon"></span>
+                </button>
+                <div class="carousel-indicators">
+                    <span class="indicator active"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                </div>
+                <button class="carousel-control next" aria-label="Next skills">
+                    <span class="control-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
 
-  <!-- Main JavaScript -->
-  <script src="scripts/main.js"></script>
+    <!-- Food Blog Section with Gallery -->
+    <section id="food" class="food-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">StuttgartFoodieAlex</h2>
+                <p class="section-subtitle">My culinary adventures</p>
+            </div>
+            <div class="food-intro">
+                <p>When I'm not coding or designing, I'm exploring Stuttgart's vibrant food scene. As <span class="gradient-text">@StuttgartFoodieAlex</span>, I discover hidden culinary gems and share my experiences with fellow food enthusiasts.</p>
+            </div>
+            <div class="food-cta">
+                <div class="apple-cards-grid">
+                  <div class="apple-card foodie-card">
+  <h3 class="work-title">Instagram</h3>
+  <p class="work-description">Daily food pics & stories from Stuttgart’s best spots.</p>
+  <a href="https://www.instagram.com/stuttgartfoodiealex/" class="apple-learn-link" target="_blank" rel="noopener">Follow on Instagram</a>
+</div>
+<div class="apple-card foodie-card">
+  <h3 class="work-title">YouTube</h3>
+  <p class="work-description">Vlogs, reviews, and behind-the-scenes from my foodie adventures.</p>
+  <a href="http://www.youtube.com/@StuttgartFoodieAlex" class="apple-learn-link" target="_blank" rel="noopener">Follow on YouTube</a>
+</div>
+<div class="apple-card foodie-card">
+  <h3 class="work-title">TikTok</h3>
+  <p class="work-description">Quick bites, trends, and fun food challenges.</p>
+  <a href="https://www.tiktok.com/@stuttgartfoodiealex" class="apple-learn-link" target="_blank" rel="noopener">Follow on TikTok</a>
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Form -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Get in Touch</h2>
+                <p class="section-subtitle">Let's collaborate on your next project</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-group">
+                        <h3>Location</h3>
+                        <p>Stuttgart Region, Germany</p>
+                    </div>
+                    <div class="info-group">
+                        <h3>Connect</h3>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/smponias/" class="social-icon" target="_blank" aria-label="LinkedIn" rel="noopener">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://x.com/alexsmponias" class="social-icon" target="_blank" aria-label="Twitter" rel="noopener">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://github.com/Smponias" class="social-icon" target="_blank" aria-label="GitHub" rel="noopener">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="info-group">
+                        <h3>Opportunities</h3>
+                        <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+    <footer class="footer" role="contentinfo">
+    <div data-include="./partials/footer.html"></div>
+
+    <!-- JavaScript -->
+    <script type="module" src="js/app.js" defer></script>
 </body>
 </html>

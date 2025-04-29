@@ -1,0 +1,128 @@
+/* 
+ * Dark Mode Stylesheet for Apple-Style Portfolio Website
+ */
+
+/* Dark Mode Variables */
+:root.dark-mode {
+    /* Colors */
+    --color-primary: #0a84ff;
+    --color-secondary: #86868b;
+    --color-text: #f5f5f7;
+    --color-text-secondary: #a1a1a6;
+    --color-background: #000000;
+    --color-background-secondary: #1d1d1f;
+    --color-border: #38383c;
+    --color-success: #30d158;
+    --color-error: #ff453a;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* Dark Mode Header */
+:root.dark-mode .header {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: var(--border-width) solid rgba(56, 56, 60, 0.5);
+}
+
+/* Dark Mode Toggle Icon */
+:root.dark-mode .toggle-icon {
+    border-color: var(--color-text);
+}
+
+:root.dark-mode .toggle-icon::before {
+    transform: translateX(0);
+    background-color: var(--color-background);
+}
+
+/* Dark Mode Hero Section */
+:root.dark-mode .parallax-bg {
+    background-image: linear-gradient(135deg, #0f0f0f 0%, #2d2d2d 100%);
+}
+
+/* Dark Mode Work Cards */
+:root.dark-mode .work-card {
+    background-color: var(--color-background-secondary);
+}
+
+/* Dark Mode Skill Categories */
+:root.dark-mode .skill-category {
+    background-color: var(--color-background-secondary);
+}
+
+/* Dark Mode Carousel Controls */
+:root.dark-mode .carousel-control {
+    background-color: var(--color-background-secondary);
+}
+
+:root.dark-mode .carousel-control:hover {
+    background-color: var(--color-border);
+}
+
+:root.dark-mode .control-icon {
+    border-color: var(--color-text);
+}
+
+:root.dark-mode .indicator {
+    background-color: var(--color-border);
+}
+
+/* Dark Mode Contact Form */
+:root.dark-mode .contact-form {
+    background-color: var(--color-background-secondary);
+}
+
+:root.dark-mode .form-input,
+:root.dark-mode .form-textarea {
+    background-color: var(--color-background);
+    border-color: var(--color-border);
+    color: var(--color-text);
+}
+
+/* Dark Mode Footer */
+:root.dark-mode .footer {
+    background-color: var(--color-background);
+    border-top: var(--border-width) solid var(--color-border);
+}
+
+:root.dark-mode .social-icon {
+    background-color: var(--color-background-secondary);
+    color: var(--color-text);
+}
+
+:root.dark-mode .back-to-top {
+    background-color: var(--color-background-secondary);
+}
+
+:root.dark-mode .top-arrow {
+    border-color: var(--color-text);
+}
+
+/* Dark Mode Demo Section */
+:root.dark-mode .demo-device {
+    background-color: #2d2d2d;
+}
+
+:root.dark-mode .device-screen.dark {
+    background-color: var(--color-background);
+}
+
+:root.dark-mode .demo-header.dark,
+:root.dark-mode .demo-element.dark {
+    background-color: var(--color-background-secondary);
+}
+
+:root.dark-mode .toggle-track {
+    background-color: var(--color-primary);
+}
+
+:root.dark-mode .toggle-indicator {
+    transform: translateX(20px);
+}
+
+/* Dark Mode Transition */
+.dark-mode-transition {
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+}

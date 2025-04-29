@@ -1,0 +1,98 @@
+/* ===== Apple-Style Highlight Cards (Homepage) ===== */
+.apple-cards-section {
+  padding: var(--spacing-xxl) 0;
+  background: #fff;
+}
+/* ===== Highlight Cards Grid ===== */
+.apple-cards-grid {
+  display: grid;
+  gap: var(--spacing-lg);
+  justify-content: center;
+  justify-items: center;
+  /* 4 columns fixed width */
+  grid-template-columns: repeat(4, 280px);
+}
+.apple-card {
+  width: 100%;
+  max-width: 280px;
+  background: #000;
+  color: #fff;
+  padding: 2.5rem 2rem 1.5rem 2rem;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+.apple-card:hover {
+  box-shadow: 0 16px 48px rgba(0,0,0,0.18);
+  transform: translateY(-6px) scale(1.03);
+}
+.card-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.card-content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.1;
+  text-align: center;
+  width: 100%;
+}
+.highlight-green { color: #30d158 !important; }
+.highlight-blue { color: #2997ff; }
+.highlight-pink { color: #ff2d55; }
+.highlight-yellow { color: #ffd60a; }
+:root:not(.dark-mode) .apple-card {
+  background: var(--color-background-secondary) !important;
+  color: #111 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* Override for foodie cards in light mode */
+:root:not(.dark-mode) .apple-card.foodie-card {
+  background: #ffffff !important;
+  color: #111 !important;
+}
+:root:not(.dark-mode) .apple-card .work-title {
+  color: #111 !important;
+}
+:root:not(.dark-mode) .apple-card .work-description {
+  color: #222 !important;
+}
+.apple-learn-link {
+  color: #30d158 !important;
+  font-weight: 600;
+  text-decoration: none;
+  transition: none !important;
+  display: inline-block;
+}
+.apple-learn-link:hover {
+  color: #30d158 !important;
+  text-decoration: underline;
+}
+
+/* Prevent clipping of highlight cards after reveal */
+.apple-cards-section.reveal-section.revealed {
+  overflow: visible !important;
+}
+
+/* 2 columns for medium screens */
+@media (max-width: 1140px) {
+  .apple-cards-grid {
+    grid-template-columns: repeat(2, 280px);
+  }
+}
+/* Single column for small screens */
+@media (max-width: 640px) {
+  .apple-cards-grid {
+    grid-template-columns: repeat(1, 280px);
+  }
+}

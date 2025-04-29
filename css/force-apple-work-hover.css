@@ -1,0 +1,19 @@
+/* Override hover effects for Apple Work Cards */
+.work-card.apple-work-card:hover,
+.apple-work-card:hover {
+  background: #000 !important;
+  color: #fff !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+:root:not(.dark-mode) .work-card.apple-work-card:hover,
+:root:not(.dark-mode) .apple-work-card:hover {
+  background: #fff !important;
+  color: #222 !important;
+}
+.work-card.apple-work-card:hover h3,
+.apple-work-card:hover h3,
+.work-card.apple-work-card:hover p,
+.apple-work-card:hover p {
+  color: inherit !important;
+}
