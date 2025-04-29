@@ -94,14 +94,14 @@ function initDarkMode() {
     
     // Update toggle icon appearance
     function updateToggleIcon(isDarkMode) {
-        const toggleIcon = document.querySelector('.toggle-icon');
-        
-        if (toggleIcon) {
-            if (isDarkMode) {
-                toggleIcon.classList.add('dark');
-            } else {
-                toggleIcon.classList.remove('dark');
-            }
+        const sunIcon = document.querySelector('.toggle-icon.sun');
+        const moonIcon = document.querySelector('.toggle-icon.moon');
+        if (isDarkMode) {
+            if (sunIcon) sunIcon.style.display = 'none';
+            if (moonIcon) moonIcon.style.display = 'block';
+        } else {
+            if (sunIcon) sunIcon.style.display = 'block';
+            if (moonIcon) moonIcon.style.display = 'none';
         }
     }
 }

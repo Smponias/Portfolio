@@ -230,6 +230,18 @@
     .form-input, .form-textarea {
         padding: 0.75rem;
     }
+    
+    /* Connect section social links fix for mobile */
+    .info-group .social-links {
+        display: flex;
+        justify-content: center;
+        gap: var(--spacing-md);
+        flex-wrap: wrap;
+    }
+    .info-group .social-links .social-icon {
+        padding: var(--spacing-xs) var(--spacing-md);
+        margin-bottom: var(--spacing-sm);
+    }
 }
 
 /* Fix for iOS Safari 100vh Issue */

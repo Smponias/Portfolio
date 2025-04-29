@@ -388,6 +388,30 @@ p {
     transform: translateY(-2px);
 }
 
+.cta-secondary {
+    border: 2px solid transparent;
+    border-image: linear-gradient(45deg, var(--color-primary), var(--color-secondary)) 1;
+    background-color: transparent;
+    color: var(--color-primary);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    font-weight: var(--font-weight-medium);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    transition: background-image var(--transition-fast), color var(--transition-fast);
+}
+
+.cta-secondary:hover {
+    background-image: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+    color: white;
+}
+
+/* Icon spacing in secondary CTA */
+.cta-secondary i {
+    margin-right: var(--spacing-md);
+}
+
 .cta-link {
     display: flex;
     align-items: center;
