@@ -26,11 +26,11 @@
 .food-cta {
   text-align: center;
 }
+/* Responsive grid for foodie cards */
 .food-cta .apple-cards-grid {
-  display: inline-grid !important;
-  grid-template-columns: repeat(3, 280px) !important;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 280px));
   gap: var(--spacing-lg);
-  grid-auto-rows: 1fr;
   justify-content: center;
-  justify-items: center;
+  align-items: start;
 }
