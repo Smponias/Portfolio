@@ -6,7 +6,8 @@ export function initDarkMode() {
   const saved = localStorage.getItem('darkMode');
   const prefers = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   
-  if (saved === 'true' || (saved === null && prefers)) {
+  // Default to dark mode unless explicitly disabled
+  if (saved !== 'false') {
     enable();
   }
   
