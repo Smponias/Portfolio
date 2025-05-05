@@ -679,6 +679,8 @@ a.apple-learn-link:hover {
     display: flex;
     gap: var(--spacing-lg);
     overflow-x: auto;
+    overflow-y: hidden;
+    touch-action: pan-x;
     padding: var(--spacing-md) 0;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;

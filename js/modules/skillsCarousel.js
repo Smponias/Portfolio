@@ -24,4 +24,13 @@ export function initSkillsCarousel() {
   indicators.forEach((ind, idx) => ind.addEventListener('click', () => { currentIndex = idx; updateCarousel(); }));
 
   updateCarousel();
+
+  // Update indicators on manual horizontal scroll
+  carousel.addEventListener('scroll', () => {
+    const newIndex = Math.round(carousel.scrollLeft / itemWidth);
+    if (newIndex !== currentIndex && newIndex >= 0 && newIndex < skillCategories.length) {
+      currentIndex = newIndex;
+      indicators.forEach((ind, idx) => ind.classList.toggle('active', idx === currentIndex));
+    }
+  });
 }
