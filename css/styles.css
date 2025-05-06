@@ -677,6 +677,7 @@ a.apple-learn-link:hover {
 
 .skills-carousel {
     display: flex;
+    align-items: center;
     gap: var(--spacing-lg);
     overflow-x: auto;
     overflow-y: hidden;
@@ -693,7 +694,7 @@ a.apple-learn-link:hover {
 
 .skill-category {
     flex: 0 0 300px;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
     padding: var(--spacing-lg);
     background-color: var(--color-background-secondary);
     border-radius: var(--border-radius-lg);
@@ -800,6 +801,29 @@ a.apple-learn-link:hover {
 .indicator.active {
     background-color: var(--color-primary);
     transform: scale(1.2);
+}
+
+/* Add left margin to first skill card on desktop for consistency */
+@media (min-width: 768px) {
+    .skills-carousel .skill-category:first-child {
+        margin-left: var(--spacing-lg);
+    }
+    .skills-carousel .skill-category:last-child {
+        margin-right: var(--spacing-lg);
+    }
+}
+
+/* Full-width carousel with equal side padding on desktop */
+@media (min-width: 768px) {
+  .skills-section .skills-carousel {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    width: 100vw;
+    padding: 0 var(--spacing-lg);
+  }
+  .skills-section .skills-carousel .skill-category {
+    margin: 0; /* reset individual card margins */
+  }
 }
 
 /* ===== Food Blog Section ===== */

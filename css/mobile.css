@@ -151,10 +151,18 @@
         margin-left: calc(-1 * var(--spacing-md));
         margin-right: calc(-1 * var(--spacing-md));
         width: calc(100% + 2 * var(--spacing-md));
+        align-items: center;  /* vertically center cards */
     }
     
     .skill-category {
         flex: 0 0 85%;
+        scroll-snap-align: center; /* snap to center */
+    }
+    .skills-carousel .skill-category:first-child {
+        margin-left: var(--spacing-md);
+    }
+    .skills-carousel .skill-category:last-child {
+        margin-right: var(--spacing-md);
     }
     
     /* Food Gallery */
